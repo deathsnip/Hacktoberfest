@@ -1,16 +1,3 @@
-//Question: https://leetcode.com/problems/3sum/
-//The brute force approach will be to run three loops (i to n-1), (j=i+1 to n-1) and (k=j+1 to n-1) and then store all the
-// triplets in a set. The TC: O(n cube * logm) logm is the time taken to insert values into set
-
-//The most optimal will be to use an advanced version of 2-pointers approach
-//The triplets sum will be zero so a+b+c = 0 OR b+c=-a
-
-//STEP 1: First we SORT the array
-//STEP 2: We will be keeping a fixed and moving b and c. B will be i+1 and c will be the last element.
-//        If b+c is greater than sum we decrement c, else we increment b
-
-//STEP 3: Once the sum is equal we will run loops to make sure we get no duplicate b,c.
-//STEP 4: Once done we run a loop and go to the next a which is not equal to the prev a and do the same thing.
 
 #include <iostream>
 #include <stdlib.h>
@@ -20,10 +7,10 @@ using namespace std;
 
 vector<vector<int>> threeSum(vector<int> &nums)
 {
-    sort(nums.begin(), nums.end()); //sorting
+    sort(nums.begin(), nums.end()); 
 
-    vector<vector<int>> ans; //vector of vectors to store all the triplets
-                             //to store a,b,c
+    vector<vector<int>> ans; 
+                             
 
     for (int i = 0; i < nums.size() - 2; i++)
     {
@@ -39,18 +26,17 @@ vector<vector<int>> threeSum(vector<int> &nums)
                 if (nums[low] + nums[high] == sum)
                 {
                     vector<int> temp;
-                    temp.push_back(nums[i]); //inserting triplets
+                    temp.push_back(nums[i]);
                     temp.push_back(nums[low]);
                     temp.push_back(nums[high]);
                     ans.push_back(temp);
 
-                    while (low + 1 < high && nums[low] == nums[low + 1]) //no duplicate low
+                    while (low + 1 < high && nums[low] == nums[low + 1])
                         low++;
-                    while (low < high - 1 && nums[high] == nums[high - 1]) //no duplicate high
+                    while (low < high - 1 && nums[high] == nums[high - 1])
                         high--;
 
-                    low++;  //brand new low
-                    high--; //brand new high
+                    low++; 
                 }
                 else if (nums[low] + nums[high] > sum)
                 {
