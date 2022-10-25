@@ -6,11 +6,11 @@
 int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
-    unsigned int n;
-    scanf("%u",&n);
-    unsigned  int a[n],sum=0;
-    for (int i=0; i<n; i++) {
-        scanf("%u",&a[i]);
+    unsigned int a;
+    scanf("%u",&a);
+    unsigned  int b[a],sum=0;
+    for (int i=0; i<a; i++) {
+        scanf("%u",&b[i]);
         sum+=a[i];
     }
     printf("%u",sum);  
