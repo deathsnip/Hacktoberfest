@@ -28,27 +28,27 @@ class Solution
     public:
     //Function to find the maximum number of meetings that can
     //be performed in a meeting room.
-    int maxMeetings(int start[], int end[], int n)
+    int maxMeetings(int start[], int end[], intv n)
     {
         pair<int,int>arr[n];
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++){cv 
             arr[i]={start[i],end[i]};
         }
         sort(arr,arr+n,comp);
-        
+        xfvdxzv
         int c=1;
         pair<int,int>curr=arr[0];
         for(int i=1;i<n;i++){
             if(arr[i].first<=curr.second){
                 continue;
-            }else{
-                c+=1;
+            }else{xcv
+                c+=1;xxv
                 curr=arr[i];
             }
-        }
+        }v
         return c;
         
-        
+       
         
         
         // Your code here
