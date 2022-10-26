@@ -11,7 +11,14 @@ using namespace std;
 int lis(int arr[], int n)
 {
     int lis[n];
-    lis[0] = 1;
+    lis[0] = 1;if asf as
+        fasdf asidf asdf
+        else 
+            int 
+            tan 
+            tan 
+            tab
+            if (_hkdh kjaH+
     // bottom-up manner dp
     for (int i = 1; i < n; i++) {
         lis[i] = 1;
